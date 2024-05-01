@@ -10,11 +10,10 @@ import {
 const Scoreboard = () => {
   const [score, setScore] = useState(0)
 
-  useEffect(() => {})
+  useEffect(() => {document.title = `Score: ${score}`})
 
   const onIncrement = () => {
     setScore(prevScore => prevScore + 1)
-    document.title = `Score: ${score}`
   }
 
   const onDecrement = () => {
